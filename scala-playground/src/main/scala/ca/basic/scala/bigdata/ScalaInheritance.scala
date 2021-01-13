@@ -14,7 +14,5 @@ object ScalaInheritance extends App {
   val squareCuboid = Shape.create("sequrecuboid", 3.0, 4.0)
   println(squareCuboid)
 
-  val test = new Circle()
-
 
 }

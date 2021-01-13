@@ -2,7 +2,7 @@ package ca.basic.scala.bigdata
 
 import scala.io.{BufferedSource, Source}
 
-object Scala_IO extends App {
+object ScalaIO extends App {
   // Read a local file
   val source: BufferedSource = Source.fromFile("/Users/manikhossain/downloads/train_loan.csv")
   val lines = source.getLines()

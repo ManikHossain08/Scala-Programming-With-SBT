@@ -1,6 +1,6 @@
 package ca.basic.scala.bigdata
 
-object Scala_HigherOrderFunctions extends App {
+object ScalaHigherOrderFunctions extends App {
 
   println("========== Functions that take arguments as a functions and return as a functions")
   def higherOrderFunctions(action: Int => Int): String = {

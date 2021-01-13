@@ -1,6 +1,6 @@
 package ca.basic.scala.bigdata
 
-object Scala_NestedFuntion extends App {
+object ScalaNestedFuntion extends App {
 
   /** if the input list has any odd number
    *

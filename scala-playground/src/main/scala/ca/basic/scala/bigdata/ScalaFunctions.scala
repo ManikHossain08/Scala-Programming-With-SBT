@@ -1,6 +1,6 @@
 package ca.basic.scala.bigdata
 
-object Scala_Functions extends App {
+object ScalaFunctions extends App {
 
   /**
    * accepts an integer and returns it incremented by one

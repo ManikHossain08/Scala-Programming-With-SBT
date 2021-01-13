@@ -1,6 +1,6 @@
 package ca.basic.scala.bigdata
 
-object Scala_Map extends App {
+object ScalaMap extends App {
   val romanNumber = Map("I" -> 1, "II" -> 2, "V" -> 5)
 
   // this returns 1

@@ -1,6 +1,6 @@
 package ca.basic.scala.bigdata
 
-object Scala_List extends App {
+object ScalaList extends App {
   val fruits: List[String] = List("Manik", "Hossain")
   val numbers : List[Int] = List(1,2,3,4,5);
   println(fruits)

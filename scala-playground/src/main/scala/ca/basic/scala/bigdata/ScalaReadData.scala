@@ -4,7 +4,7 @@ import schema.Movie
 
 import scala.io.{BufferedSource, Source}
 
-object Scala_ReadData extends App {
+object ScalaReadData extends App {
   val source: BufferedSource = Source.fromURL("https://raw.githubusercontent.com/irajhedayati/mcit/master/hive/movie.csv")
   val lines: List[String] = source.getLines().toList
 

@@ -4,7 +4,7 @@ import schema.Movie
 
 import scala.io.{BufferedSource, Source}
 
-object Scala_CustomFileLoad extends App {
+object ScalaCustomFileLoad extends App {
   val sourceFileName = "https://raw.githubusercontent.com/irajhedayati/mcit/master/hive/movie.csv"
 
   /** Reads a file (CSV) and applies transformer */

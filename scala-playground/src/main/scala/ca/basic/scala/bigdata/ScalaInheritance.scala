@@ -1,6 +1,6 @@
 package ca.basic.scala.bigdata
 
-object InheritanceShape extends App {
+object ScalaInheritance extends App {
 
   val circle = Shape.create("circle", 1.0, 0.0)
   println(circle)
@@ -13,5 +13,8 @@ object InheritanceShape extends App {
 
   val squareCuboid = Shape.create("sequrecuboid", 3.0, 4.0)
   println(squareCuboid)
+
+  val test = new Circle()
+
 
 }

@@ -1,10 +1,11 @@
 package ca.basic.scala.bigdata
 
 class Person(_name: String, _age: Int){
-  var name = _name
+  val name = _name
   private var age = _age
 
   override def toString = s"New person is $name, your age $age"
+
   def modifyObject(p: String) : Person = {
     new Person(p, age + 5)
   }

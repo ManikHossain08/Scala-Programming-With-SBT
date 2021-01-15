@@ -1,6 +1,7 @@
 package ca.basic.calculator.rational.number
 
 object CalculatorClient extends App {
+
   val rationalCalc = new Rational()
 
   val addition: Rational = rationalCalc.rationalAdd(new Rational(1,2), new Rational(2,3))
@@ -33,4 +34,3 @@ object CalculatorClient extends App {
 
 
 // for more please check this: https://gist.github.com/IvanProdaiko94/663776739b9b577f949bfb4818936585
-  

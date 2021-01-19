@@ -2,7 +2,7 @@ package ca.basic.scala.bigdata
 
 object ScalaUseOfOtherClasses extends App {
   println(ObjectWithFunctions.myFunction("Laval"))
-  println(new ClassWithFunctions().myFunction("Toronto"))
+  println(new ClassWithFunctions().myFunction("Toronto")) // first create object (instantiate) then call thee method
   println(CaseClassWithFunctions().myFunction("Null"))
 }
 

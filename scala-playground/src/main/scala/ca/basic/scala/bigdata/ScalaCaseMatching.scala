@@ -1,5 +1,6 @@
 package ca.basic.scala.bigdata
 
+
 object ScalaCaseMatching extends App {
 
   case class Person(name: String, age: Int)
@@ -15,5 +16,12 @@ object ScalaCaseMatching extends App {
     case "Joe" => s"this person ${person.name} age is ${person.age}."
     case _ => s"this person is completely unknown."
   }
+
+  val a = List(1, 2)
+  val aaa = 4 :: List(4, 5)
+  println(aaa)
+
+  val capitals = Map("Argentina" -> "Buenos Aires", "Canada" -> "Ottawa")
+  println(capitals.get("Mexico"))
 
 }

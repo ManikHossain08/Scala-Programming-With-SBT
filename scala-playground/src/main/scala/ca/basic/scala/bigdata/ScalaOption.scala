@@ -30,7 +30,7 @@ object ScalaOption extends App {
   println(value5.isEmpty)
 
 
-  // get value according to the condition
+  // get value according to the condition... [ this will handle the exception without Some() or None value]
   println("==============")
   geoLookUp.get("Montreal") match {
     case Some(geo) => println(geo.province)
@@ -47,6 +47,7 @@ object ScalaOption extends App {
   val x = geoLookUp.get("Ottawa").map(_.province).map(_.toLowerCase())
   println(x)
 
+  // https://stackoverflow.com/questions/1784664/what-is-the-difference-between-declarative-and-imperative-paradigm-in-programmin
 
 
 }

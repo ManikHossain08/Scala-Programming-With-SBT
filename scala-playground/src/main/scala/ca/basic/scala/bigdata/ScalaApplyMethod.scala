@@ -1,7 +1,5 @@
 package ca.basic.scala.bigdata
 
-import scala.io.{BufferedSource, Source}
-
 object ScalaApplyMethod extends App{
 
   /**
@@ -14,6 +12,36 @@ object ScalaApplyMethod extends App{
    * Using "apply" function:
    * 1. add a companion object
    * 2. add 'apply' function: def apply(PARAMETERS): Class = ???
+   *
+   * Question: What is apply and unapply method?
+   * =>
+   * Whereas the apply method is like a constructor which takes arguments and creates an object,
+   * the unapply takes an object and tries to give back the arguments. This is most often used in pattern matching
+   * and partial functions.
+
+      apply is probably the easier to explain. Essentially, when you treat your object like a function,
+      apply is the method that is called, so, Scala turns:
+
+      obj(a, b, c) to obj.apply(a, b, c).
+
+
+      unapply is a bit more complicated. It is used in Scala's pattern matching mechanism and its most common use
+      I've seen is in Extractor Objects.
+
+      For example, here's a toy extractor object:
+
+      object Foo {
+        def unapply(x : Int) : Option[String] =
+          if(x == 0) Some("Hello, World") else None
+      }
+
+      In Scala Extractor is defined as an object which has a method named unapply as one of its part.
+      This method extracts an object and returns back the attributes. This method is also used in Pattern matching and
+      Partial functions. Extractors also explains apply method, which takes the arguments and constructs an object so,
+      it’s helpful in constructing values. The unapply method reverses the construction procedure of the apply method.
+   *
+   * Source: https://docs.scala-lang.org/tour/extractor-objects.html
+   *
    */
 
   case class PersonWithApply(name:String, age: Int)

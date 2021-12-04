@@ -39,8 +39,9 @@ class SquareCuboid(side: Double, height: Double) extends Square(side: Double) {
 }
 
 
+
 object Shape {
-  def create(name: String, x: Double, y: Double): Shape = name.toLowerCase match {
+  def apply(name: String, x: Double, y: Double): Shape = name.toLowerCase match {
     case "circle" => new Circle(x)
     case "cylinder" => new Cylinder(x, y)
     case "square" => new Square(x)

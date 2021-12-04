@@ -24,13 +24,11 @@ object ScalaHigherOrderFunctions extends App {
   def forecastInFahrenheit: Seq[Double] = temperatures.map(convertCtoF) // <-- passing the method convertCtoF
   println(forecastInFahrenheit)
 
-  println("========== Higher Order Functions, Functions that accept functions")
+  println("========== Higher Order Functions, Functions that accept functions as parmeter")
   // please review later : https://docs.scala-lang.org/tour/higher-order-functions.html
   // these functions can also be converted as 'lambda functions'
 
   val salaries = List(20000.0, 70000, 40000)
-  private def promotion(salaries: List[Double], promotionFunction: Double => Double): List[Double] =
-    salaries.map(promotionFunction)
 
   def smallPromotion(salaries: List[Double]): List[Double] =
     promotion(salaries, salary => salary * 1.1)
@@ -40,6 +38,9 @@ object ScalaHigherOrderFunctions extends App {
 
   def hugePromotion(salaries: List[Double]): List[Double] =
     promotion(salaries, salary => salary * salary)
+
+  private def promotion(salaries: List[Double], promotionFunction: Double => Double): List[Double] =
+    salaries.map(promotionFunction)
 
   println(smallPromotion(salaries))
 

@@ -82,7 +82,7 @@ object CaseClassOOP extends App{
   // All can be achieved by
   case class Person5(name: String, age: Int)
 
-  val p7 = new Person5("Iraj", 30)
-  val p8 = new Person5("Iraj", 30)
+  val p7 =  Person5("Iraj", 30)
+  val p8 =  Person5("Iraj", 30)
   println(s"Is '$p7' == '$p8': ${p7 == p8}")
 }

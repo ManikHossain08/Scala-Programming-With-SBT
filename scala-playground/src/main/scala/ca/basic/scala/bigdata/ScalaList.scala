@@ -2,7 +2,7 @@ package ca.basic.scala.bigdata
 
 object ScalaList extends App {
   val fruits: List[String] = List("Manik", "Hossain")
-  val numbers : List[Int] = List(1,2,3,4,5);
+  val numbers : List[Int] = List(1,2,3,4,5)
   println(fruits)
   println(numbers)
 
@@ -35,8 +35,8 @@ object ScalaList extends App {
   println(s"last of the list is ${numbers.last}")
   println(s"reverse of the list is ${numbers.reverse}")
   println(s"tail of the list is ${numbers.tail}")
-  println(s"Head of the list is ${numbers.init}")
-  println(s"Head of the list is ${numbers.isEmpty}")
+  println(s"Head of the list is ${numbers.init}") // to get except last value we use init method
+  println(s"is the list is  empty ${numbers.isEmpty}")
 
 
   // --------- loop with list--------

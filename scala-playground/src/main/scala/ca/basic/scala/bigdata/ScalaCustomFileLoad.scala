@@ -14,14 +14,14 @@ object ScalaCustomFileLoad extends App {
     lines
   }
 
-  val lines = customFileLoad(sourceFileName, identity)
+  val lines = customFileLoad(sourceFileName, identity) // Here identity is builtin so it will do nothing input = output same
   lines.foreach(e => println(e))
 
 
   // Transformer converts each input to a Movie
   println("==========Transformer converts each input to a Movie========")
   def getMovieObj(line: String): String = {
-    var fields = line.split(",", -1)
+    val fields = line.split(",", -1)
     Movie(fields(0).toInt, fields(1), fields(2).toInt, fields(3)).toString
   }
   customFileLoad(sourceFileName, getMovieObj).foreach(e => println(e))

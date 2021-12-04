@@ -1,10 +1,8 @@
 package ca.basic.calculator.rational.number
 
 class Rational (x: Int, y: Int) {
-  def num:Int = x
-  def den:Int = y
-
-  def this() = this(0, 0)
+  val num:Int = x
+  val den:Int = y
 
   def rationalAdd(r:Rational, s: Rational): Rational = {
     new Rational(r.num * s.den + s.num * r.den, r.den * s.den)
@@ -26,9 +24,5 @@ class Rational (x: Int, y: Int) {
     new Rational(-r.num, r.den)
   }
 
-  def makeString(r: Rational) =
-    s"${r.num}/${r.den}"
-
-  override def toString = s"${makeString(this)}"
-
+  override def toString = s"${this.num}/${this.den}"
 }

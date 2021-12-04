@@ -26,9 +26,5 @@ class RationalAlternative (val x: Int, val y: Int) {
     new RationalAlternative(x * -1,  y) // but from here "*", this will not consider as a method.
   }
 
-  def makeString(r: RationalAlternative) =
-    s"${r.x}/${r.y}"
-
-  override def toString = s"${makeString(this)}"
-
+  override def toString = s"${this.x}/${this.y}"
 }

@@ -35,7 +35,7 @@ class SquareCuboid(side: Double, height: Double) extends Square(side: Double) {
     s"""this SquareCuboid has the length of $side and height of $height with the area of ${area()}""".stripMargin
   }
 
-  override def area(): Double = ((side + side) + (2 * height)) // NOTE: applied random formula to calculate area
+  override def area(): Double = (side + side) + (2 * height) // NOTE: applied random formula to calculate area
 }
 
 

@@ -23,5 +23,4 @@ object ScalaFunctions extends App {
   println(org)
   println(newVal)
 
-
 }

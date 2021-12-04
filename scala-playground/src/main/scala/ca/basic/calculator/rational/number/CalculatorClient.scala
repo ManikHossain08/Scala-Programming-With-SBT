@@ -2,7 +2,7 @@ package ca.basic.calculator.rational.number
 
 object CalculatorClient extends App {
 
-  val rationalCalc = new Rational()
+  val rationalCalc = new Rational(0,0)
 
   val addition: Rational = rationalCalc.rationalAdd(new Rational(1,2), new Rational(2,3))
   println(addition)

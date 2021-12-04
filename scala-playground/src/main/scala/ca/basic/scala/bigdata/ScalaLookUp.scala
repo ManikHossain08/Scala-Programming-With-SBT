@@ -81,10 +81,10 @@ object ScalaLookUp extends App {
     .map(std => std._1 -> std._2.size)
 
   // alternative and short code
-  val provinceStudentCount2 = enrichedStudentInnerJoin.groupBy(_.province).mapValues(_.size)
+  val provinceStudentCount2: Map[String, Int] = enrichedStudentInnerJoin.groupBy(_.province).mapValues(_.size)
 
   println("=========")
-  provinceStudentCount.foreach(println)
+  //provinceStudentCount.foreach(println)
   provinceStudentCount2.foreach(println)
 
 }

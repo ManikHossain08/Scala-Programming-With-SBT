@@ -1,6 +1,6 @@
 package ca.basic.scala.bigdata
 
-object ScalaNestedFuntion extends App {
+object ScalaNestedFunction extends App {
 
   /** if the input list has any odd number
    *
@@ -10,7 +10,8 @@ object ScalaNestedFuntion extends App {
   def hasOdd(list: List[Int]): Boolean = {
 
     def isOdd(in: Int): Boolean = in % 2 == 1
-    list.exists(isOdd) // returning boolean type
+    list.exists(isOdd) // returning boolean type (this exist is higher order function, so its take another function as argument)
+    list.exists(_%2 ==1)  // this is annonymous function and will be passed this function argument of a higher order function
   }
 
   /**

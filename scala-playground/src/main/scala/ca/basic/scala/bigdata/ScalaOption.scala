@@ -37,14 +37,14 @@ object ScalaOption extends App {
     case None => println("geo.province not available")
   }
 
-  val q = geoLookUp.get("Toronto")
+  val q: Option[Geo] = geoLookUp.get("Toronto")
   if (q.isDefined)
     println(q.get.province)
   else
     println("We don't have information of Ottawa")
 
   println("==============")
-  val x = geoLookUp.get("Ottawa").map(_.province).map(_.toLowerCase())
+  val x: Option[String] = geoLookUp.get("Ottawa").map(_.province).map(_.toLowerCase())
   println(x)
 
   // https://stackoverflow.com/questions/1784664/what-is-the-difference-between-declarative-and-imperative-paradigm-in-programmin

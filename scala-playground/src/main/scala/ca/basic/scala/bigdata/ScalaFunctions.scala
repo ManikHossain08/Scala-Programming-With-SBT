@@ -26,4 +26,11 @@ object ScalaFunctions extends App {
   println(newVal)
   println(modifiedMore)
 
+  /**
+   * Tuple
+      A tuple groups together simple logical collections of items without using a class.
+   */
+  val tuples = ("manik", 34)
+  println(tuples._1)
+
 }

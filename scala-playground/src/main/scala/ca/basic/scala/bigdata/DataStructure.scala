@@ -2,6 +2,8 @@ package ca.basic.scala.bigdata
 
 object DataStructure extends App {
   /**
+   * https://twitter.github.io/scala_school/collections.html
+   *
    * Arrays
 Arrays preserve order, can contain duplicates, and are mutable.
    Lists
@@ -160,4 +162,19 @@ flatten collapses one level of nested structure.
   // Now filter out every entry whose phone extension is lower than 200.
   extensions.filter(_._2 <200).mapValues(_*5).foreach(println)
   extensions.filter(_._2 <200).mapValues(_*5).keys.foreach(println)
+
+  /**
+   * 6. Iterator (Iterator)
+  In Scala, iterator is not a collection, however, provides a way to access a collection.
+  When building a collection requires a lot of overhead (such as reading all rows of a file), iterators can play a good role.
+  Note that after the above operation is executed, the iterator will move until the end, and it cannot be used again.
+  If you continue to execute itprintln(iter.next)I will report an error. In addition, in the above code,
+  useiter.nextwithiter.next()It is ok, however,hasNextDon't be added to the back.
+   */
+  val iter = Iterator("Hadoop","Spark","Scala")
+  while (iter.hasNext) {
+    println(iter.next())
+  }
+
+
 }

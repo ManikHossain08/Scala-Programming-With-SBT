@@ -1,5 +1,7 @@
 package ca.basic.scala.bigdata
 
+import ca.basic.scala.bigdata.ScalaOption.geoLookUp
+
 object PatternMatchingByTuples extends App {
   val glazedDonutTuple = Tuple2("Glazed Donut", "Very Tasty")
   val glazedDonut = Tuple3("Glazed Donut", "Very Tasty", 2.50)
@@ -47,5 +49,11 @@ object PatternMatchingByTuples extends App {
   //BC
   d3.patternMatching
   //AA
+
+  println("==============")
+  geoLookUp.get("Montreal") match {
+    case Some(geo) => println(geo.province)
+    case None => println("geo.province not available")
+  }
 
 }

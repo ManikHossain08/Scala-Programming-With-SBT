@@ -3,6 +3,7 @@ package ca.basic.scala.bigdata
 object DataStructure extends App {
   /**
    * https://twitter.github.io/scala_school/collections.html
+   * https://alvinalexander.com/scala/how-to-choose-collection-class-scala-cookbook/
    *
    * Arrays
 Arrays preserve order, can contain duplicates, and are mutable.

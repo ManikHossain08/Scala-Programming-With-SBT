@@ -40,7 +40,7 @@ object TestList extends App {
   println(city.init) // List(List(Montreal, Toronto), List(New York)) // init remove the last one
 
 
-  val romanNumerals = Map("I" -> 1, "V" -> 5, "X" -> 10)
+  val romanNumerals: Map[String, Int] = Map("I" -> 1, "V" -> 5, "X" -> 10)
   val capitalOfCountry = Map("US" -> "Washington", "Switzerland" -> "Bern")
 
   romanNumerals.filter(x => x._1 == "V").values.foreach(println)

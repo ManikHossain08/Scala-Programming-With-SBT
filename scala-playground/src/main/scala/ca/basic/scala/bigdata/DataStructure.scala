@@ -105,17 +105,17 @@ partition splits a list based on where it falls with respect to a predicate func
    * find
 find returns the first element of a collection that matches a predicate function.
    */
-
+  println("find(i => i > 5)")
   numbers2.find(i => i > 5).foreach(println)
 
   /**
    * drop & dropWhile
-drop drops the first i elements (from first to that index)
+   drop drops the first i elements (from first to that index)
    dropWhile
   dropWhile removes the first element that match a predicate function. For example,
   if we dropWhile odd numbers from our list of numbers, 1 gets dropped (but not 3 which is “shielded” by 2).
    */
-
+  println("drop & dropWhile")
   numbers2.drop(5).foreach(println) // res0: List[Int] = List(6, 7, 8, 9, 10)
   numbers2.dropWhile(_ % 2 != 0).foreach(println) // List[Int] = List(2, 3, 4, 5, 6, 7, 8, 9, 10)
 
@@ -124,13 +124,16 @@ drop drops the first i elements (from first to that index)
    * 0 is the starting value (Remember that numbers is a List[Int]), and m
 acts as an accumulator.
    */
-  numbers2.foldLeft(0)((m: Int, n: Int) => m + n) // Int = 55
+  println("foldLeft: ")
+  println(numbers2.foldLeft(0)((m: Int, n: Int) => m + n)) // Int = 55
+  println("foldLeft: Fibonacci")
   (1 to 10).foldLeft(0) { (m, n) => println(s"$m  + $n = ${m+n}"); m + n } // fibonacci series print
 
   /**
    * foldRight
 Is the same as foldLeft except it runs in the opposite direction.
    */
+  println("foldRight: series")
   (1 to 10).foldRight(0) { (m, n) => println(s"$m  + $n = ${m+n}"); m + n } // fibonacci series print
 
   /**
@@ -147,9 +150,10 @@ flatten collapses one level of nested structure.
   flatMap is a frequently used combinator that combines mapping and flattening.
   flatMap takes a function that works on the nested lists and then concatenates the results back together.
    */
-
+  println("Flatmap:")
   nestedList.flatMap(_.map(_*2)).foreach(println)
 
+  println("flatten -> Map:")
   // Think of it as short-hand for mapping and then flattening:
   nestedList.map(_.map(_*3)).flatten.foreach(println)
   // that example calling map and then flatten is an example of the “combinator”-like nature of these functions.
@@ -164,6 +168,9 @@ flatten collapses one level of nested structure.
   extensions.filter(_._2 <200).mapValues(_*5).foreach(println)
   extensions.filter(_._2 <200).mapValues(_*5).keys.foreach(println)
 
+  println("Map filter")
+  extensions.filter(_._2 < 101).mapValues(_*5).values.foreach(println)
+  println("Map filter: END")
   /**
    * 6. Iterator (Iterator)
   In Scala, iterator is not a collection, however, provides a way to access a collection.
